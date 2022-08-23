@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'split-layout',
+    loadChildren: () => import('./pages/split-layout/split-layout.module').then( m => m.SplitLayoutPageModule)
+  },
+  {
+    path: 'first',
+    loadChildren: () => import('./pages/first/first.module').then( m => m.FirstPageModule)
+  },
+  {
+    path: 'second',
+    loadChildren: () => import('./pages/second/second.module').then( m => m.SecondPageModule)
+  },
+  {
+    path: 'details',
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+  },
 ];
 
 @NgModule({
