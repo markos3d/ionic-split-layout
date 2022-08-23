@@ -1,9 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>splitLayout</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-split-pane contentId="menu-content" when="xl">
+  <ion-menu contentId="menu-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-menu-toggle autoHide="false">
+        <ion-item routerLink="/app/first" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            First
+          </ion-label>
+        </ion-item>
 
-<ion-content>
-
-</ion-content>
+        <ion-item routerLink="/app/second" routerDirection="root" routerLinkActive="active-link">
+          <ion-label>
+            Second
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="menu-content"></ion-router-outlet>
+</ion-split-pane>
