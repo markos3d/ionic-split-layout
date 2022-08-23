@@ -1,0 +1,7 @@
+{
+  "name": "split-layout",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
